@@ -1,7 +1,8 @@
 const divs = document.querySelectorAll('div');
 
 function logText(e) {
-  console.log(this.classList.value);
+  console.log(this.classList.value); 
+  e.stopPropagation(); // stop bubbling this event up
 }
 
 // events bububle up = by default capture: false (run function on the way up)
